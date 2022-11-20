@@ -32,11 +32,11 @@
 
 
 # [[footer]]
-#   name = "Tags"
+#   name = "tags"
 #   pageRef = "tags"
 #   weight = 10
 
 # [[footer]]
-#   name = "Categories"
-#   pageRef = "categories"
+#   name = "topics"
+#   pageRef = "topics"
 #   weight = 20

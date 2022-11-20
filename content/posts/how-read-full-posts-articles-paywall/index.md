@@ -88,11 +88,8 @@ Tip: You can quickly create a bookmark on any page by hitting <kbd>command</kbd>
 
 An app that is seeing quite some traction and sees continuous feature updates, is Incoggo. They start to become a do-it-all solution that breaks through paywalls, yet now also blocks ads and does other stuff (full feature list can be found [here]([#](https://incoggo.com/))
 
-### Using a VPN for sites that only allow free readers in certain countries
+### Beyond borders: Using a VPN
 
 Sometimes all it takes is being in another country...
 
 
-{{< alert "envelope" >}}
-There are **no** affiliate links in this article. If you found this article useful and want to support me, please consider subscribing to [the <mark>ipears</mark> newsletter](/ipears) or tell your best buddy to do so. *You rock!*
-{{< /alert >}}
