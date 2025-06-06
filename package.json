@@ -1,21 +1,19 @@
 {
-  "name": "mnml-hugo-site",
+  "name": "janvaniperen-com",
   "version": "1.0.0",
-  "description": "A minimal Hugo site using the MNML theme",
-  "main": "index.js",
+  "description": "Jan van Iperen's personal website built with Hugo and MNML theme",
   "scripts": {
-    "dev": "hugo server --themesDir ../.. --theme mnml",
-    "build": "hugo --gc --minify --themesDir ../.. --theme mnml",
-    "clean": "rm -rf public resources"
+    "build": "git submodule update --init --recursive && hugo --minify --gc",
+    "dev": "git submodule update --init --recursive && hugo serve",
+    "clean": "rm -rf public"
   },
-  "keywords": [
-    "hugo",
-    "mnml",
-    "minimal",
-    "theme"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/janvaniperen/janvaniperen_com.git"
+  },
   "author": "Jan van Iperen",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "hugo-bin": "^0.111.3"
+  }
 } 
