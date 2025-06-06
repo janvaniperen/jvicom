@@ -4,6 +4,7 @@ date: 2025-05-04
 description: "It's as minimal and functional as I want it to be"
 toc: true
 tags: ["hugo", "theme", "minimalism"]
+
 ---
 
 Weird, but there are products that you *want* to use just for the sake of using them.
