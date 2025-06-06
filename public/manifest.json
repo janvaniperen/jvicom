@@ -1,0 +1,21 @@
+{
+  "name": "MNML Hugo Theme",
+  "short_name": "MNML",
+  "description": "A minimalist Hugo theme focused on content readability",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#FFB800",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "orientation": "portrait-primary"
+} 

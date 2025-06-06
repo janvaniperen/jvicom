@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main class="list-page">
+    <div class="list-content">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="list-intro">
+            {{ . }}
+        </div>
+        {{ end }}
+
+        <div class="list-items">
+            {{ range .Pages.ByDate.Reverse }}
+            <article class="post-item">
+                <div class="project-header">
+                    <div class="project-dates">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+                    </div>
+                    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                </div>
+                {{ with .Description }}
+                <p>{{ . }}</p>
+                {{ end }}
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</main>
+{{ end }} 

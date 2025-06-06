@@ -1,0 +1,81 @@
+/* Custom styles to override theme defaults */
+
+/* Fix for the see-all-link arrows */
+.see-all-link {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.see-all-link::before {
+    content: "→";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Make posts list match projects list */
+.post-item {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.post-item .project-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.post-item .project-header h4 {
+    margin: 0;
+    font-weight: 500;
+    order: 1; /* Ensure title is first */
+}
+
+.post-item .project-header a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.post-item .project-header a:hover {
+    border-color: var(--text-color);
+}
+
+.post-item .project-dates {
+    font-family: var(--mono-font);
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    order: 2; /* Ensure dates are second */
+}
+
+/* Enhanced vertical centering for list pages */
+.list-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main.list-page {
+    padding: 0;
+    min-height: calc(100vh - var(--footer-height));
+}
+
+.list-content {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.copyright {
+    color: var(--copyright-color);
+    margin-right: 0.2rem;
+    font-weight: 200;
+} 

@@ -1,0 +1,21 @@
+{
+  "name": "mnml-hugo-site",
+  "version": "1.0.0",
+  "description": "A minimal Hugo site using the MNML theme",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --themesDir ../.. --theme mnml",
+    "build": "hugo --gc --minify --themesDir ../.. --theme mnml",
+    "clean": "rm -rf public resources"
+  },
+  "keywords": [
+    "hugo",
+    "mnml",
+    "minimal",
+    "theme"
+  ],
+  "author": "Jan van Iperen",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+} 

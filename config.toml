@@ -1,0 +1,79 @@
+baseURL = "https://janvaniperen.com/"
+languageCode = "en-us"
+title = "Jan van Iperen"
+theme = "mnml"
+
+# Enable syntax highlighting
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+# Enable table of contents
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.goldmark.parser.attribute]
+    block = true
+    title = true
+
+# Image processing
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+
+# Performance optimizations
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+
+[params]
+  author = "Jan van Iperen"
+  description = "Connecting and informing people, mostly in food supply chains"
+  siteTitle = "Jan van Iperen"
+  defaultOgImage = "/images/og-default.jpg"
+  
+  # Social media links
+  github = "https://github.com/janvaniperen"
+  twitter = "https://twitter.com/janvaniperen"
+  linkedin = "https://linkedin.com/in/janvaniperen"
+
+[params.homepage]
+  sections = [
+    { type = "posts", title = "Recent Posts", weight = 1 },
+    { type = "projects", title = "Projects & Work", weight = 2 }
+  ]
+
+# Generate sitemap
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3 
