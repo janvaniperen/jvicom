@@ -48,10 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to toggle shortcuts panel
     function toggleShortcuts() {
         const backdrop = document.querySelector('.keyboard-shortcuts-backdrop');
-        if (shortcuts && backdrop) {
-            shortcuts.classList.toggle('visible');
-            backdrop.classList.toggle('visible');
-        }
+        shortcuts.classList.toggle('visible');
+        backdrop.classList.toggle('visible');
     }
     
     // Function to toggle theme
@@ -98,7 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Theme switch is handled in script.js to avoid conflicts
+    // Add click handler for theme switch
+    const themeSwitch = document.querySelector('.theme-switch');
+    if (themeSwitch) {
+        themeSwitch.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            toggleTheme(isDark ? 'light' : 'dark');
+        });
+    }
     
     // Keyboard event listener
     document.addEventListener('keydown', (e) => {
@@ -107,17 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // Skip if subscription overlay is open (handled in script.js)
-        const subscribeOverlay = document.getElementById('subscribe-overlay');
-        if (subscribeOverlay && subscribeOverlay.classList.contains('visible')) {
-            return;
-        }
-        
         switch(e.key.toLowerCase()) {
-            case 's':
-                // Skip 's' key - handled by subscription overlay in script.js
-                return;
-                
             case 'h':
                 e.preventDefault();
                 goToHome();
@@ -196,25 +191,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
                 
             case 'escape':
-                if (shortcuts && shortcuts.classList.contains('visible')) {
-                    shortcuts.classList.remove('visible');
-                    const backdrop = document.querySelector('.keyboard-shortcuts-backdrop');
-                    if (backdrop) {
-                        backdrop.classList.remove('visible');
-                    }
-                }
+                shortcuts.classList.remove('visible');
+                document.querySelector('.keyboard-shortcuts-backdrop').classList.remove('visible');
                 break;
         }
     });
     
     // Close shortcuts panel when clicking outside
     document.addEventListener('click', (e) => {
-        if (shortcuts && shortcuts.classList.contains('visible') && !shortcuts.contains(e.target)) {
+        if (shortcuts.classList.contains('visible') && !shortcuts.contains(e.target)) {
             shortcuts.classList.remove('visible');
-            const backdrop = document.querySelector('.keyboard-shortcuts-backdrop');
-            if (backdrop) {
-                backdrop.classList.remove('visible');
-            }
         }
     });
 }); 

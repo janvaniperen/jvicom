@@ -1,11 +1,7 @@
 baseURL = "https://janvaniperen.com/"
 languageCode = "en-us"
 title = "Jan van Iperen"
-
-# Theme configuration using Hugo modules
-[module]
-  [[module.imports]]
-    path = "github.com/janvaniperen/mnml"
+theme = "mnml"
 
 # Enable syntax highlighting
 [markup]

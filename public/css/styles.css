@@ -1,16 +1,6 @@
 /* Theme transition */
 html {
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Prevent layout shift when scrollbar appears */
-    scrollbar-gutter: stable;
-    overflow-y: auto; /* Fallback for browsers without scrollbar-gutter support */
-}
-
-/* For browsers that don't support scrollbar-gutter */
-@supports not (scrollbar-gutter: stable) {
-    html {
-        overflow-y: scroll;
-    }
 }
 
 html:not(.theme-loaded) {
@@ -40,8 +30,6 @@ html:not(.theme-loaded) {
     --mono-font: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     --link-color: #2563eb;
     --link-hover-color: #1d4ed8;
-    --chevron-color: #FFB800;
-    --copyright-color: #FFB800;
     
     /* Layout */
     --content-width: 42rem;
@@ -72,8 +60,6 @@ html:not(.theme-loaded) {
     --text-lighter: #6b7280;
     --link-color: #60a5fa;
     --link-hover-color: #93c5fd;
-    --chevron-color: #FFB800;
-    --copyright-color: #FFB800;
 }
 
 /* Reset */
@@ -95,6 +81,7 @@ body {
     line-height: var(--line-height);
     color: var(--text-color);
     background-color: var(--bg-color);
+    padding-bottom: var(--footer-height);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -135,20 +122,12 @@ p, ul, ol {
 a {
     color: var(--accent-color);
     text-decoration: none;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid transparent;
     transition: border-color 0.2s ease;
 }
 
 a:hover, a:focus {
-    border-bottom-color: rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] a {
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] a:hover, [data-theme="dark"] a:focus {
-    border-bottom-color: rgba(255, 255, 255, 0.3);
+    border-bottom-color: var(--accent-color);
 }
 
 /* Layout */
@@ -156,7 +135,6 @@ main {
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 2rem 1rem;
-    padding-bottom: calc(2rem + var(--footer-height));
     min-height: calc(100vh - var(--footer-height));
 }
 
@@ -177,6 +155,7 @@ header {
 
 /* List pages specific layout */
 .list-page {
+    min-height: calc(100vh - var(--footer-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,7 +166,6 @@ header {
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 2rem 1rem;
-    padding-bottom: calc(2rem + var(--footer-height));
 }
 
 .list-content h1 {
@@ -261,10 +239,11 @@ header {
 
 /* Update main content area for list pages */
 main.list-page {
+    min-height: calc(100vh - var(--footer-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
+    padding: 2rem 1rem;
 }
 
 section {
@@ -274,21 +253,6 @@ section {
 /* Lists */
 ul, ol {
     padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Reduce margin for nested lists */
-ul ul, 
-ul ol,
-ol ul,
-ol ol {
-    margin-bottom: 0.5rem;
-}
-
-/* Last child lists shouldn't have bottom margin */
-li:last-child > ul,
-li:last-child > ol {
-    margin-bottom: 0;
 }
 
 ul li::marker {
@@ -469,248 +433,6 @@ footer {
     color: var(--accent-color);
 }
 
-/* Floating subscribe button */
-.floating-subscribe-toggle {
-    position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.75rem;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.floating-subscribe-toggle:hover {
-    background-color: rgba(255, 184, 0, 0.1);
-    transform: scale(1.1);
-}
-
-.floating-subscribe-toggle svg {
-    width: 20px;
-    height: 20px;
-    color: #FFB800;
-    stroke: #FFB800;
-    fill: none;
-    transition: all 0.2s ease;
-}
-
-.floating-subscribe-toggle:hover svg {
-    color: #FFB800;
-    stroke: #FFB800;
-    transform: scale(1.05);
-}
-
-.floating-subscribe-toggle:focus {
-    outline: 2px solid #FFB800;
-    outline-offset: 2px;
-}
-
-/* Subscribe overlay */
-.subscribe-overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 2rem;
-    max-width: 400px;
-    width: 90%;
-    z-index: 1001;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    /* Force hidden state */
-    pointer-events: none;
-    display: none;
-}
-
-[data-theme="dark"] .subscribe-overlay {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.subscribe-overlay.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
-    pointer-events: auto;
-    display: block;
-}
-
-.subscribe-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    pointer-events: none;
-    display: none;
-}
-
-.subscribe-backdrop.visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    display: block;
-}
-
-.subscribe-content {
-    position: relative;
-}
-
-.subscribe-content h2 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.subscribe-content p {
-    margin: 0 0 1.5rem 0;
-    color: var(--secondary-color);
-    font-size: 0.95rem;
-}
-
-.subscribe-form {
-    margin-bottom: 0;
-}
-
-.subscribe-input-group {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-.subscribe-input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.75rem 0;
-    font-size: 1rem;
-    color: var(--text-color);
-    outline: none;
-    transition: border-color 0.2s ease;
-}
-
-.subscribe-input:focus {
-    border-bottom-color: var(--accent-color);
-}
-
-.subscribe-input::placeholder {
-    color: var(--text-lighter);
-}
-
-.subscribe-button {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-
-.subscribe-button:hover {
-    border-color: var(--accent-color);
-    background: var(--accent-color);
-    color: var(--bg-color);
-}
-
-.subscribe-button:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
-}
-
-.subscribe-close {
-    position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--secondary-color);
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-}
-
-.subscribe-close:hover {
-    background: var(--border-color);
-    color: var(--text-color);
-}
-
-.subscribe-close:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
-}
-
-/* Mobile responsiveness for floating subscribe */
-@media (max-width: 768px) {
-    .floating-subscribe-toggle {
-        top: 1rem;
-        right: 1rem;
-        padding: 0.5rem;
-    }
-    
-    .floating-subscribe-toggle svg {
-        width: 18px;
-        height: 18px;
-        color: #FFB800;
-        stroke: #FFB800;
-    }
-    
-    .subscribe-overlay {
-        padding: 1.5rem;
-        margin: 1rem;
-        width: calc(100% - 2rem);
-        /* Ensure it stays hidden unless .visible class is added */
-        opacity: 0;
-        visibility: hidden;
-    }
-    
-    .subscribe-overlay.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .subscribe-input-group {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .subscribe-input {
-        width: 100%;
-    }
-    
-    .subscribe-button {
-        width: 100%;
-        padding: 1rem;
-    }
-}
-
 /* Theme Switch */
 .theme-switch {
     position: relative;
@@ -888,7 +610,7 @@ html[data-theme="dark"] .theme-switch:focus-visible .switch-track {
 .see-all-link {
     font-size: 1.2rem;
     color: var(--secondary-color);
-    border-bottom: none !important;
+    border-bottom: none;
     line-height: 1;
     display: block;
     transition: color 0.2s ease, transform 0.2s ease;
@@ -910,45 +632,42 @@ html[data-theme="dark"] .theme-switch:focus-visible .switch-track {
     margin-top: 2rem;
 }
 
-/* Make posts list match projects list */
 .post-item {
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
-.post-item .project-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.post-item:last-child {
+    border-bottom: none;
+}
+
+.post-item h2 {
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
-.post-item .project-header h4 {
-    margin: 0;
-    font-weight: 500;
-    order: 1; /* Ensure title is first */
+.post-item time {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    margin-right: 1rem;
+    min-width: 7rem;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    align-self: center;
 }
 
-.post-item .project-header a {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-}
-
-.post-item .project-header a:hover {
-    border-color: var(--text-color);
-}
-
-.post-item .project-dates {
-    font-family: var(--mono-font);
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-bottom: 0;
+.post-item h3 {
     display: flex;
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.5;
     align-items: center;
-    order: 2; /* Ensure dates are second */
+}
+
+.post-item h3 a {
+    flex-grow: 1;
 }
 
 /* Projects Grid */
@@ -1199,16 +918,6 @@ blockquote cite {
     }
 }
 
-@media (max-width: 1000px) {
-    .table-of-contents {
-        display: none;
-    }
-    
-    .toc-wrapper {
-        display: none;
-    }
-}
-
 @media (max-width: 768px) {
     :root {
         --base-font-size: 1rem;
@@ -1216,12 +925,6 @@ blockquote cite {
     
     main {
         padding: 1.5rem 1rem;
-        padding-bottom: calc(1.5rem + var(--footer-height));
-    }
-    
-    .list-content {
-        padding: 1.5rem 1rem;
-        padding-bottom: calc(1.5rem + var(--footer-height));
     }
     
     .post-grid .post-card h4, .project-grid .project-card h4, .taxonomy-grid .taxonomy-card h4 {
@@ -1232,6 +935,14 @@ blockquote cite {
     .post-grid .post-card time, .project-grid .project-card time, .taxonomy-grid .taxonomy-card time {
         margin-bottom: 0.25rem;
         min-width: auto;
+    }
+    
+    .toc-wrapper {
+        display: none;  /* Hide TOC wrapper on mobile */
+    }
+    
+    .table-of-contents {
+        display: none;  /* Hide TOC on mobile */
     }
     
     .post-page main {
@@ -1741,13 +1452,13 @@ a.keyboard-active::before {
     content: '›';
     position: absolute;
     left: -0.75rem;
-    color: #FFB800;  /* Changed from #3b82f6 to #FFB800 */
+    color: #3b82f6;  /* Bright blue */
     opacity: 0.8;
     transition: opacity 0.2s ease;
-    text-shadow: 0 0 8px rgba(255, 184, 0, 0.3);  /* Updated shadow color */
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.3);  /* Subtle blue glow */
     font-size: 1.2rem;
     line-height: 1;
-    top: 0.1em;
+    top: 0.1em;  /* Slight vertical adjustment for links */
 }
 
 a.keyboard-active:hover::before {
@@ -1764,13 +1475,13 @@ a.keyboard-active:hover::before {
     content: '›';
     position: absolute;
     left: -1.5rem;
-    color: #FFB800;  /* Changed from #3b82f6 to #FFB800 */
+    color: #3b82f6;  /* Bright blue */
     font-weight: bold;
     opacity: 0.8;
-    text-shadow: 0 0 8px rgba(255, 184, 0, 0.3);  /* Updated shadow color */
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.3);  /* Subtle blue glow */
     font-size: 1.2rem;
     line-height: 1;
-    top: 0.1em;
+    top: 0.1em;  /* Slight vertical adjustment for links */
 }
 
 /* Add the same style for active headings */
@@ -1784,14 +1495,14 @@ h2.keyboard-active::before,
 h3.keyboard-active::before {
     content: '›';
     position: absolute;
-    left: -1.75rem;
-    color: #FFB800;  /* Changed from #3b82f6 to #FFB800 */
+    left: -1.75rem;  /* Slightly more space for headings */
+    color: #3b82f6;  /* Bright blue */
     font-weight: bold;
     opacity: 0.8;
-    text-shadow: 0 0 8px rgba(255, 184, 0, 0.3);  /* Updated shadow color */
-    font-size: 1.4rem;
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.3);  /* Subtle blue glow */
+    font-size: 1.4rem;  /* Larger size for headings */
     line-height: 1;
-    top: 0.15em;
+    top: 0.15em;  /* Adjusted vertical position for headings */
 }
 
 .theme-credit {
@@ -1811,15 +1522,4 @@ h3.keyboard-active::before {
 .theme-credit a:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
-}
-
-/* Chevron and navigation indicator styling */
-.separator,
-.keyboard-nav-indicator {
-    color: var(--chevron-color);
-}
-
-[data-theme="dark"] .separator,
-[data-theme="dark"] .keyboard-nav-indicator {
-    color: var(--chevron-color);
 } 
