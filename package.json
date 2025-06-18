@@ -1,5 +1,5 @@
 {
-  "name": "janvaniperen-com",
+  "name": "jvicom",
   "version": "1.0.0",
   "description": "Jan van Iperen's personal website",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/janvaniperen/janvaniperen-com.git"
+    "url": "https://github.com/janvaniperen/jvicom.git"
   },
   "author": "Jan van Iperen",
   "license": "MIT"

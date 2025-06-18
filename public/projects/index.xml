@@ -1,13 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on Jan van Iperen</title><link>https://janvaniperen.com/projects/</link><description>Recent content in Projects on Jan van Iperen</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://janvaniperen.com/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Juice News</title><link>https://janvaniperen.com/projects/juice-news/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/projects/juice-news/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>Started in November 2014 with 22 recipients who received individually sent emails&amp;hellip; Juice News has grown to a newsletter with over 1600 recipients all over the world, and a website that is read by thousands every month.&lt;/p>
-&lt;p>···&amp;gt; &lt;em>this post is being updated&lt;/em>&lt;/p></description></item><item><title>MNML Hugo Theme</title><link>https://janvaniperen.com/projects/mnml-hugo-theme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/projects/mnml-hugo-theme/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>MNML is a minimalist Hugo theme designed for content creators who want a clean, distraction-free website. The theme focuses on typography and readability, ensuring that your content takes center stage.&lt;/p>
-&lt;h2 id="features">Features&lt;/h2>
-&lt;h3 id="clean-typography">Clean Typography&lt;/h3>
-&lt;p>MNML uses a carefully selected typography system that prioritizes readability across different devices and screen sizes. The font choices and spacing are optimized for long-form reading.&lt;/p>
-&lt;h3 id="darklight-mode">Dark/Light Mode&lt;/h3>
-&lt;p>The theme includes a toggle for dark and light modes, allowing readers to choose their preferred reading experience. The color scheme transitions smoothly between modes.&lt;/p></description></item><item><title>Sierra Agra USA</title><link>https://janvaniperen.com/projects/sierra-agra-usa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/projects/sierra-agra-usa/</guid><description>&lt;h2 id="company">Company&lt;/h2>
-&lt;p>Sierra Agra USA transforms the &amp;ldquo;unseen harvest&amp;rdquo;&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>—culled, rejected, or cosmetically imperfect produce—into a diverse portfolio of juices, purees, concentrates, and by-products, addressing a critical yet often overlooked issue in California&amp;rsquo;s Central Valley.&lt;/p>
-&lt;h2 id="roles">Roles&lt;/h2>
-&lt;h3 id="advisor-to-the-board-marketing-consultant-july-2022--july-2024">Advisor to the Board, Marketing Consultant (July 2022 – July 2024)&lt;/h3>
-&lt;p>Drawing on my experience as a broker in the juice and beverage industry, I joined Sierra Agra USA in July 2022 as an advisor to the board, focusing on sales and marketing. I collaborated closely with the C-suite to shape the company’s positioning and marketing strategy, leveraging my industry network and expertise built through &lt;strong>indupro&lt;/strong> and my authority grown through &lt;strong>Juice News&lt;/strong> .&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Jan van Iperen</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Jan van Iperen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Juice News</title>
+      <link>http://localhost:1313/projects/juice-news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/juice-news/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Started in November 2014 with 22 recipients who received individually sent emails&amp;hellip; Juice News has grown to a newsletter with over 1600 recipients all over the world, and a website that is read by thousands every month.&lt;/p&gt;&#xA;&lt;p&gt;···&amp;gt; &lt;em&gt;this post is being updated&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MNML Hugo Theme</title>
+      <link>http://localhost:1313/projects/mnml-hugo-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/mnml-hugo-theme/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;MNML is a minimalist Hugo theme designed for content creators who want a clean, distraction-free website. The theme focuses on typography and readability, ensuring that your content takes center stage.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;h3 id=&#34;clean-typography&#34;&gt;Clean Typography&lt;/h3&gt;&#xA;&lt;p&gt;MNML uses a carefully selected typography system that prioritizes readability across different devices and screen sizes. The font choices and spacing are optimized for long-form reading.&lt;/p&gt;&#xA;&lt;h3 id=&#34;darklight-mode&#34;&gt;Dark/Light Mode&lt;/h3&gt;&#xA;&lt;p&gt;The theme includes a toggle for dark and light modes, allowing readers to choose their preferred reading experience. The color scheme transitions smoothly between modes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sierra Agra USA</title>
+      <link>http://localhost:1313/projects/sierra-agra-usa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/sierra-agra-usa/</guid>
+      <description>&lt;h2 id=&#34;company&#34;&gt;Company&lt;/h2&gt;&#xA;&lt;p&gt;Sierra Agra USA transforms the &amp;ldquo;unseen harvest&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;—culled, rejected, or cosmetically imperfect produce—into a diverse portfolio of juices, purees, concentrates, and by-products, addressing a critical yet often overlooked issue in California&amp;rsquo;s Central Valley.&lt;/p&gt;&#xA;&lt;h2 id=&#34;roles&#34;&gt;Roles&lt;/h2&gt;&#xA;&lt;h3 id=&#34;advisor-to-the-board-marketing-consultant-july-2022--july-2024&#34;&gt;Advisor to the Board, Marketing Consultant (July 2022 – July 2024)&lt;/h3&gt;&#xA;&lt;p&gt;Drawing on my experience as a broker in the juice and beverage industry, I joined Sierra Agra USA in July 2022 as an advisor to the board, focusing on sales and marketing. I collaborated closely with the C-suite to shape the company’s positioning and marketing strategy, leveraging my industry network and expertise built through &lt;strong&gt;indupro&lt;/strong&gt; and my authority grown through &lt;strong&gt;Juice News&lt;/strong&gt; .&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

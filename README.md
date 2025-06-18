@@ -1,4 +1,4 @@
-# Jan van Iperen - Personal Website
+# jvicom - Jan van Iperen's Personal Website
 
 Personal website built with Hugo and the MNML theme.
 

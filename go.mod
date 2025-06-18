@@ -1,4 +1,4 @@
-module github.com/janvaniperen/janvaniperen-com
+module github.com/janvaniperen/jvicom
 
 go 1.21
 
