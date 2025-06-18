@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Jan van Iperen's personal website",
   "scripts": {
-    "dev": "git submodule update --init --recursive && hugo server -D --bind 0.0.0.0",
-    "build": "git submodule update --init --recursive && hugo --gc --minify",
-    "preview": "git submodule update --init --recursive && hugo server --bind 0.0.0.0"
+    "dev": "hugo server -D --bind 0.0.0.0",
+    "build": "hugo --gc --minify",
+    "preview": "hugo server --bind 0.0.0.0"
   },
   "repository": {
     "type": "git",
