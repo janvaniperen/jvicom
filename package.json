@@ -1,19 +1,16 @@
 {
   "name": "janvaniperen-com",
   "version": "1.0.0",
-  "description": "Jan van Iperen's personal website built with Hugo and MNML theme",
+  "description": "Jan van Iperen's personal website",
   "scripts": {
-    "build": "git submodule update --init --recursive && hugo --minify --gc",
-    "dev": "git submodule update --init --recursive && hugo serve",
-    "clean": "rm -rf public"
+    "dev": "hugo server -D --bind 0.0.0.0",
+    "build": "hugo --gc --minify",
+    "preview": "hugo server --bind 0.0.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/janvaniperen/janvaniperen_com.git"
+    "url": "https://github.com/janvaniperen/janvaniperen-com.git"
   },
   "author": "Jan van Iperen",
-  "license": "MIT",
-  "devDependencies": {
-    "hugo-bin": "^0.111.3"
-  }
+  "license": "MIT"
 } 

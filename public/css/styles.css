@@ -469,6 +469,248 @@ footer {
     color: var(--accent-color);
 }
 
+/* Floating subscribe button */
+.floating-subscribe-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.floating-subscribe-toggle:hover {
+    background-color: rgba(255, 184, 0, 0.1);
+    transform: scale(1.1);
+}
+
+.floating-subscribe-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: #FFB800;
+    stroke: #FFB800;
+    fill: none;
+    transition: all 0.2s ease;
+}
+
+.floating-subscribe-toggle:hover svg {
+    color: #FFB800;
+    stroke: #FFB800;
+    transform: scale(1.05);
+}
+
+.floating-subscribe-toggle:focus {
+    outline: 2px solid #FFB800;
+    outline-offset: 2px;
+}
+
+/* Subscribe overlay */
+.subscribe-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* Force hidden state */
+    pointer-events: none;
+    display: none;
+}
+
+[data-theme="dark"] .subscribe-overlay {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+    display: block;
+}
+
+.subscribe-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    display: none;
+}
+
+.subscribe-backdrop.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: block;
+}
+
+.subscribe-content {
+    position: relative;
+}
+
+.subscribe-content h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.subscribe-content p {
+    margin: 0 0 1.5rem 0;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+.subscribe-form {
+    margin-bottom: 0;
+}
+
+.subscribe-input-group {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.subscribe-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.subscribe-input:focus {
+    border-bottom-color: var(--accent-color);
+}
+
+.subscribe-input::placeholder {
+    color: var(--text-lighter);
+}
+
+.subscribe-button {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.subscribe-button:hover {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.subscribe-button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.subscribe-close {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.subscribe-close:hover {
+    background: var(--border-color);
+    color: var(--text-color);
+}
+
+.subscribe-close:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Mobile responsiveness for floating subscribe */
+@media (max-width: 768px) {
+    .floating-subscribe-toggle {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .floating-subscribe-toggle svg {
+        width: 18px;
+        height: 18px;
+        color: #FFB800;
+        stroke: #FFB800;
+    }
+    
+    .subscribe-overlay {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+        /* Ensure it stays hidden unless .visible class is added */
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .subscribe-overlay.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .subscribe-input-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .subscribe-input {
+        width: 100%;
+    }
+    
+    .subscribe-button {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
 /* Theme Switch */
 .theme-switch {
     position: relative;

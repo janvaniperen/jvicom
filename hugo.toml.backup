@@ -4,11 +4,11 @@ title = "Jan van Iperen"
 theme = "mnml"
 
 # Enable syntax highlighting
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-
-# Enable table of contents
 [markup]
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    codeFences = true
   [markup.tableOfContents]
     endLevel = 3
     ordered = false
@@ -16,9 +16,9 @@ pygmentsUseClasses = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.goldmark.parser.attribute]
-    block = true
-    title = true
+    [markup.goldmark.parser.attribute]
+      block = true
+      title = true
 
 # Image processing
 [imaging]

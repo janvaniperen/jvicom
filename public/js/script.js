@@ -13,23 +13,142 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Theme Toggle
-    const themeSwitch = document.getElementById('theme-switch');
+    const themeSwitch = document.querySelector('.theme-switch');
     
     // Set initial state of theme switch
-    if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        themeSwitch.checked = true;
+    if (themeSwitch && document.documentElement.getAttribute('data-theme') === 'dark') {
+        themeSwitch.setAttribute('aria-checked', 'true');
     }
     
     // Listen for toggle changes
-    themeSwitch.addEventListener('change', function(e) {
-        if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
+    if (themeSwitch) {
+        themeSwitch.addEventListener('click', function(e) {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                this.setAttribute('aria-checked', 'false');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                this.setAttribute('aria-checked', 'true');
+            }
+        });
+    }
+    
+    // Subscribe overlay functionality
+    const subscribeToggle = document.querySelector('.floating-subscribe-toggle');
+    const subscribeOverlay = document.getElementById('subscribe-overlay');
+    const subscribeBackdrop = document.getElementById('subscribe-backdrop');
+    const subscribeClose = document.querySelector('.subscribe-close');
+    
+    function showSubscribeOverlay() {
+        if (subscribeOverlay && subscribeBackdrop) {
+            subscribeOverlay.classList.add('visible');
+            subscribeBackdrop.classList.add('visible');
+            document.body.style.overflow = 'hidden';
+            // Focus on email input
+            const emailInput = subscribeOverlay.querySelector('.subscribe-input');
+            if (emailInput) {
+                setTimeout(() => emailInput.focus(), 100);
+            }
+        }
+    }
+    
+    function hideSubscribeOverlay() {
+        if (subscribeOverlay && subscribeBackdrop) {
+            subscribeOverlay.classList.remove('visible');
+            subscribeBackdrop.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Event listeners for subscribe overlay
+    if (subscribeToggle) {
+        subscribeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            showSubscribeOverlay();
+        });
+    }
+    
+    if (subscribeClose) {
+        subscribeClose.addEventListener('click', hideSubscribeOverlay);
+    }
+    
+    if (subscribeBackdrop) {
+        subscribeBackdrop.addEventListener('click', hideSubscribeOverlay);
+    }
+    
+    // Simple keyboard event listener for subscription overlay
+    document.addEventListener('keydown', function(e) {
+        // Handle subscription overlay
+        if (e.key === 'Escape' && subscribeOverlay && subscribeOverlay.classList.contains('visible')) {
+            hideSubscribeOverlay();
+            return;
+        }
+        
+        // Open subscription overlay with 'S' key
+        if (e.key.toLowerCase() === 's' && 
+            e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA' &&
+            (!subscribeOverlay || !subscribeOverlay.classList.contains('visible')) && 
+            (!document.querySelector('.keyboard-shortcuts') || !document.querySelector('.keyboard-shortcuts').classList.contains('visible'))) {
+            e.preventDefault();
+            showSubscribeOverlay();
+            return;
         }
     });
+    
+    // Kit form integration
+    const subscribeForm = document.querySelector('.subscribe-form');
+    if (subscribeForm) {
+        subscribeForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('.subscribe-input').value;
+            const submitButton = this.querySelector('.subscribe-button');
+            
+            if (!email) return;
+            
+            // Show loading state
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
+            
+            // Kit integration - you'll need to replace with actual Kit endpoint
+            const kitFormId = this.getAttribute('data-kit-form');
+            
+            // Simulate Kit API call (replace with actual Kit integration)
+            fetch(`https://api.kit.com/forms/${kitFormId}/subscribe`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email_address: email
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Success
+                submitButton.textContent = 'Subscribed!';
+                setTimeout(() => {
+                    hideSubscribeOverlay();
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                    this.reset();
+                }, 1500);
+            })
+            .catch(error => {
+                // Error
+                console.error('Subscription error:', error);
+                submitButton.textContent = 'Try again';
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 2000);
+            });
+        });
+    }
     
     // Add copy buttons to code blocks
     document.querySelectorAll('pre').forEach(function(codeBlock) {
