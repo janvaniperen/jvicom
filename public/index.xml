@@ -1,75 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Jan van Iperen</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Jan van Iperen</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 27 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Project: Citrodex</title>
-      <link>http://localhost:1313/posts/project-citrodex/</link>
-      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/project-citrodex/</guid>
-      <description>&lt;p&gt;I tried a citrus focused newsletter some time ago.&lt;/p&gt;&#xA;&lt;p&gt;Maybe I was too early, or just missed a couple of essential building blocks to make it happen.&lt;/p&gt;&#xA;&lt;p&gt;One thing I did learn is that sometimes, how you have it in your head does not necessarily reflect similarly with your audience. I learned much more and that is why I am building something much better.&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-in-a-name&#34;&gt;What&amp;rsquo;s in a name?&lt;/h2&gt;&#xA;&lt;p&gt;I called that first rendition &lt;em&gt;&lt;strong&gt;citreae&lt;/strong&gt;&lt;/em&gt; and quickly learned that it is quite the disadvantage when you have to help people pronounce or even write the name of your service.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Weekend Project(s)</title>
-      <link>http://localhost:1313/posts/weekend-project/</link>
-      <pubDate>Fri, 09 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/weekend-project/</guid>
-      <description>&lt;p&gt;When I&amp;rsquo;m bored&amp;hellip; I need to create. And my creative process is usually linked to building something: a new design, a website or the framework for a full-scale solution to a world problem.&#xA;Think big, start small.&lt;/p&gt;&#xA;&lt;p&gt;It usually comes down to this: I have an idea, I draw an outline, buy a domain, desing a logo, start building a website&amp;hellip;&lt;br&gt;&#xA;1 Problem though: Too many projects never leave &lt;code&gt;localhost&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>I created a Hugo theme: MNML</title>
-      <link>http://localhost:1313/posts/created-mnml-hugo-theme/</link>
-      <pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/created-mnml-hugo-theme/</guid>
-      <description>&lt;p&gt;Weird, but there are products that you &lt;em&gt;want&lt;/em&gt; to use just for the sake of using them.&lt;/p&gt;&#xA;&lt;p&gt;It is the way a pen feels in your hand and interacts with the paper, the way the lid closes of a hand-crafted wooden storage box, perfectly and with a pause before a satisfying click, the way my wallet slides out my credit cards evenly spread out with one move of the top of my pink.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Juice News v7.1</title>
-      <link>http://localhost:1313/posts/juice-news-7-1/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/juice-news-7-1/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In all honesty: I did not really keep track of the major version updates&amp;hellip; but this feels about right. Let&amp;rsquo;s call this &lt;code&gt;version 7&lt;/code&gt; of Juice News. Lucky number Seven. And from now on I&amp;rsquo;ll try to share proper and &lt;strong&gt;regular&lt;/strong&gt; changelogs&amp;hellip;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;10-years-of-juice-news&#34;&gt;10 Years of Juice News&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;November 7th of 2024 marked the exact date that Juice News celebrated its 10th anniversary.&lt;/strong&gt; The result of a (mostly) continuous flow of sifting through hundreds of news items, articles and research publications&amp;hellip; on a daily basis. A habit that has become part of my life.&lt;br&gt;&#xA;I am not somebody who gets emotional about this, but I did sit back for a sec and realized it is something I am doing for more that a fifth of my life. And yes, I am proud of that.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Privacy Policy</title>
-      <link>http://localhost:1313/pages/privacy/</link>
-      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/privacy/</guid>
-      <description>&lt;h2 id=&#34;privacy-policy&#34;&gt;Privacy Policy&lt;/h2&gt;&#xA;&lt;p&gt;This is an example standalone page that won&amp;rsquo;t appear in the main navigation but can be linked to directly.&lt;/p&gt;&#xA;&lt;h3 id=&#34;information-we-collect&#34;&gt;Information We Collect&lt;/h3&gt;&#xA;&lt;p&gt;Your privacy is important to us&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;how-we-use-information&#34;&gt;How We Use Information&lt;/h3&gt;&#xA;&lt;p&gt;We use the information we collect to&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;&#xA;&lt;p&gt;If you have questions about this privacy policy, please contact us.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start with my name: &lt;strong&gt;Jan 🗣️ [&lt;em&gt;Yahnn&lt;/em&gt;]&lt;/strong&gt;&amp;hellip; it&amp;rsquo;s a Dutch thing. &lt;em&gt;&lt;strong&gt;Jay&lt;/strong&gt;&lt;/em&gt; is also fine.&lt;/p&gt;&#xA;&lt;p&gt;A little about me: Dutch guy, born in the year of the Apple I (1976), happily married to Bee, proud father of 3 boys and active in food supply chains for the past 25 years. Mostly as intermediary between producers (those transforming fruits and vegetables into juices, concentrates, purees, oils and essences) and those active in the ingredients industry (who use these half products to make new ingredients, compounds or who bottle the product for consumer consumption).&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Juice News</title>
-      <link>http://localhost:1313/projects/juice-news/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/juice-news/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Started in November 2014 with 22 recipients who received individually sent emails&amp;hellip; Juice News has grown to a newsletter with over 1600 recipients all over the world, and a website that is read by thousands every month.&lt;/p&gt;&#xA;&lt;p&gt;···&amp;gt; &lt;em&gt;this post is being updated&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>MNML Hugo Theme</title>
-      <link>http://localhost:1313/projects/mnml-hugo-theme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/mnml-hugo-theme/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;MNML is a minimalist Hugo theme designed for content creators who want a clean, distraction-free website. The theme focuses on typography and readability, ensuring that your content takes center stage.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;h3 id=&#34;clean-typography&#34;&gt;Clean Typography&lt;/h3&gt;&#xA;&lt;p&gt;MNML uses a carefully selected typography system that prioritizes readability across different devices and screen sizes. The font choices and spacing are optimized for long-form reading.&lt;/p&gt;&#xA;&lt;h3 id=&#34;darklight-mode&#34;&gt;Dark/Light Mode&lt;/h3&gt;&#xA;&lt;p&gt;The theme includes a toggle for dark and light modes, allowing readers to choose their preferred reading experience. The color scheme transitions smoothly between modes.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Sierra Agra USA</title>
-      <link>http://localhost:1313/projects/sierra-agra-usa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/sierra-agra-usa/</guid>
-      <description>&lt;h2 id=&#34;company&#34;&gt;Company&lt;/h2&gt;&#xA;&lt;p&gt;Sierra Agra USA transforms the &amp;ldquo;unseen harvest&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;—culled, rejected, or cosmetically imperfect produce—into a diverse portfolio of juices, purees, concentrates, and by-products, addressing a critical yet often overlooked issue in California&amp;rsquo;s Central Valley.&lt;/p&gt;&#xA;&lt;h2 id=&#34;roles&#34;&gt;Roles&lt;/h2&gt;&#xA;&lt;h3 id=&#34;advisor-to-the-board-marketing-consultant-july-2022--july-2024&#34;&gt;Advisor to the Board, Marketing Consultant (July 2022 – July 2024)&lt;/h3&gt;&#xA;&lt;p&gt;Drawing on my experience as a broker in the juice and beverage industry, I joined Sierra Agra USA in July 2022 as an advisor to the board, focusing on sales and marketing. I collaborated closely with the C-suite to shape the company’s positioning and marketing strategy, leveraging my industry network and expertise built through &lt;strong&gt;indupro&lt;/strong&gt; and my authority grown through &lt;strong&gt;Juice News&lt;/strong&gt; .&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jan van Iperen</title><link>https://janvaniperen.com/</link><description>Recent content on Jan van Iperen</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 09 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://janvaniperen.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Weekend Project(s)</title><link>https://janvaniperen.com/posts/weekend-project/</link><pubDate>Fri, 09 May 2025 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/posts/weekend-project/</guid><description>&lt;p>When I&amp;rsquo;m bored&amp;hellip; I need to create. And my creative process is usually linked to building something: a new design, a website or the framework for a full-scale solution to a world problem.
+Think big, start small.&lt;/p>
+&lt;p>It usually comes down to this: I have an idea, I draw an outline, buy a domain, desing a logo, start building a website&amp;hellip;&lt;br>
+1 Problem though: Too many projects never leave &lt;code>localhost&lt;/code>.&lt;/p></description></item><item><title>I created a Hugo theme: MNML</title><link>https://janvaniperen.com/posts/created-mnml-hugo-theme/</link><pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/posts/created-mnml-hugo-theme/</guid><description>&lt;p>Weird, but there are products that you &lt;em>want&lt;/em> to use just for the sake of using them.&lt;/p>
+&lt;p>It is the way a pen feels in your hand and interacts with the paper, the way the lid closes of a hand-crafted wooden storage box, perfectly and with a pause before a satisfying click, the way my wallet slides out my credit cards evenly spread out with one move of the top of my pink.&lt;/p></description></item><item><title>Privacy Policy</title><link>https://janvaniperen.com/pages/privacy/</link><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/pages/privacy/</guid><description>&lt;h2 id="privacy-policy">Privacy Policy&lt;/h2>
+&lt;p>This is an example standalone page that won&amp;rsquo;t appear in the main navigation but can be linked to directly.&lt;/p>
+&lt;h3 id="information-we-collect">Information We Collect&lt;/h3>
+&lt;p>Your privacy is important to us&amp;hellip;&lt;/p>
+&lt;h3 id="how-we-use-information">How We Use Information&lt;/h3>
+&lt;p>We use the information we collect to&amp;hellip;&lt;/p>
+&lt;h3 id="contact">Contact&lt;/h3>
+&lt;p>If you have questions about this privacy policy, please contact us.&lt;/p></description></item><item><title>About</title><link>https://janvaniperen.com/about/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/about/</guid><description>&lt;h2 id="about-me">About Me&lt;/h2>
+&lt;p>Let&amp;rsquo;s start with my name: &lt;strong>Jan 🗣️ [&lt;em>Yahnn&lt;/em>]&lt;/strong>&amp;hellip; it&amp;rsquo;s a Dutch thing. &lt;em>&lt;strong>Jay&lt;/strong>&lt;/em> is also fine.&lt;/p>
+&lt;p>A little about me: Dutch guy, born in the year of the Apple I (1976), happily married to Bee, proud father of 3 boys and active in food supply chains for the past 25 years. Mostly as intermediary between producers (those transforming fruits and vegetables into juices, concentrates, purees, oils and essences) and those active in the ingredients industry (who use these half products to make new ingredients, compounds or who bottle the product for consumer consumption).&lt;/p></description></item><item><title>Juice News</title><link>https://janvaniperen.com/projects/juice-news/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/projects/juice-news/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Started in November 2014 with 22 recipients who received individually sent emails&amp;hellip; Juice News has grown to a newsletter with over 1600 recipients all over the world, and a website that is read by thousands every month.&lt;/p>
+&lt;p>···&amp;gt; &lt;em>this post is being updated&lt;/em>&lt;/p></description></item><item><title>MNML Hugo Theme</title><link>https://janvaniperen.com/projects/mnml-hugo-theme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/projects/mnml-hugo-theme/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>MNML is a minimalist Hugo theme designed for content creators who want a clean, distraction-free website. The theme focuses on typography and readability, ensuring that your content takes center stage.&lt;/p>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;h3 id="clean-typography">Clean Typography&lt;/h3>
+&lt;p>MNML uses a carefully selected typography system that prioritizes readability across different devices and screen sizes. The font choices and spacing are optimized for long-form reading.&lt;/p>
+&lt;h3 id="darklight-mode">Dark/Light Mode&lt;/h3>
+&lt;p>The theme includes a toggle for dark and light modes, allowing readers to choose their preferred reading experience. The color scheme transitions smoothly between modes.&lt;/p></description></item><item><title>Sierra Agra USA</title><link>https://janvaniperen.com/projects/sierra-agra-usa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://janvaniperen.com/projects/sierra-agra-usa/</guid><description>&lt;h2 id="company">Company&lt;/h2>
+&lt;p>Sierra Agra USA transforms the &amp;ldquo;unseen harvest&amp;rdquo;&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>—culled, rejected, or cosmetically imperfect produce—into a diverse portfolio of juices, purees, concentrates, and by-products, addressing a critical yet often overlooked issue in California&amp;rsquo;s Central Valley.&lt;/p>
+&lt;h2 id="roles">Roles&lt;/h2>
+&lt;h3 id="advisor-to-the-board-marketing-consultant-july-2022--july-2024">Advisor to the Board, Marketing Consultant (July 2022 – July 2024)&lt;/h3>
+&lt;p>Drawing on my experience as a broker in the juice and beverage industry, I joined Sierra Agra USA in July 2022 as an advisor to the board, focusing on sales and marketing. I collaborated closely with the C-suite to shape the company’s positioning and marketing strategy, leveraging my industry network and expertise built through &lt;strong>indupro&lt;/strong> and my authority grown through &lt;strong>Juice News&lt;/strong> .&lt;/p></description></item></channel></rss>

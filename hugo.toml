@@ -48,8 +48,8 @@ theme = "mnml"
 
 [params.homepage]
   sections = [
-    { type = "posts", title = "Recent Posts", weight = 1 },
-    { type = "projects", title = "Projects & Work", weight = 2 }
+    { type = "posts", title = "Recent Posts", weight = 1, count = 3 },
+    { type = "projects", title = "Projects & Work", weight = 2, count = 3 }
   ]
 
 # Generate sitemap
