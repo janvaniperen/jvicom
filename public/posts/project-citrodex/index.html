@@ -73,7 +73,7 @@
     <script src="/js/script.js" defer></script>
     <script src="/js/toc.js" defer></script>
     </head> <body class=""><header>
-</header> <main>
+</header> <main id="main-content">
 <article class="single-content">
     <header class="single-header">
         
@@ -134,7 +134,7 @@
         </main><footer>
     <div class="footer-content">
         <div class="footer-title">
-            <a href="/">Jan van Iperen</a>
+            <span class="copyright">&#169;</span><a href="/">Jan van Iperen</a>
         </div>
         <nav class="footer-nav">
             <ul>
@@ -154,11 +154,7 @@
         </nav>
     </div>
 </footer> 
-<script src="/js/toc.js"></script>
-
-
-
-<script src="/js/theme.js"></script>
+<script src="/js/script.js"></script>
 <script src="/js/keyboard-nav.js"></script> 
         <div id="keyboard-shortcuts-backdrop" class="keyboard-shortcuts-backdrop"></div>
         <div id="keyboard-shortcuts-backdrop" class="keyboard-shortcuts-backdrop"></div>
@@ -172,11 +168,39 @@
             <li><kbd>K</kbd> Previous link</li>
             <li><kbd>N</kbd> Next post/project</li>
             <li><kbd>P</kbd> Previous post/project</li>
+            <li><kbd>S</kbd> Subscribe</li>
             <li><kbd>0</kbd> Dark mode</li>
             <li><kbd>1</kbd> Light mode</li>
             <li><kbd>?</kbd> Show/hide shortcuts</li>
         </ul>
     </div>
 </div> 
+        <button class="floating-subscribe-toggle" aria-label="Subscribe to newsletter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+    </svg>
+</button> 
+        <div id="subscribe-overlay" class="subscribe-overlay">
+    <div class="subscribe-content">
+        <h2>Subscribe</h2>
+        <p>Get updates on new posts and projects</p>
+        <form data-kit-form="your-kit-form-id" class="subscribe-form">
+            <div class="subscribe-input-group">
+                <input 
+                    type="email" 
+                    name="email_address" 
+                    placeholder="your@email.com" 
+                    required 
+                    class="subscribe-input"
+                    aria-label="Email address"
+                >
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </div>
+        </form>
+        <button class="subscribe-close" aria-label="Close subscription form">×</button>
+    </div>
+</div>
+<div id="subscribe-backdrop" class="subscribe-backdrop"></div> 
     </body>
 </html> 
