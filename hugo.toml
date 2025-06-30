@@ -45,6 +45,16 @@ theme = "mnml"
   github = "https://github.com/janvaniperen"
   twitter = "https://twitter.com/janvaniperen"
   linkedin = "https://linkedin.com/in/janvaniperen"
+  
+  # Email subscription settings
+  # Set enableSubscription to false to disable the email popup entirely
+  enableSubscription = false
+  # Your Kit form ID (required if enableSubscription = true)
+  # Get this from your Kit account: https://kit.com
+  kitFormId = ""
+  # Subscription popup texts (optional customization)
+  subscribeTitle = "Subscribe"
+  subscribeDescription = "Get updates on new posts and projects"
 
 [params.homepage]
   sections = [
