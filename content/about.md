@@ -1,6 +1,5 @@
 ---
 title: "About"
-date: 2023-01-01
 ---
 
 ## About Me
